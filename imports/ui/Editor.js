@@ -52,16 +52,20 @@ export class Editor extends Component {
 			return (
 				<div className="editor">
 					<input
+						className="editor__title"
 						value={this.state.title}
 						placeholder="Untitled Note"
 						onChange={this.handleTitleChange.bind(this)}
 					/>
 					<textarea
+						className="editor__body"
 						value={this.state.body}
 						placeholder="Your note here..."
 						onChange={this.handleBodyChange.bind(this)}
 					/>
-					<button onClick={this.handleRemoval.bind(this)}>Delete Note</button>
+					<div>
+						<button onClick={this.handleRemoval.bind(this)}>Delete Note</button>
+					</div>
 				</div>
 			);
 		} else {

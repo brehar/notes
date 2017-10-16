@@ -64,14 +64,18 @@ export class Editor extends Component {
 						onChange={this.handleBodyChange.bind(this)}
 					/>
 					<div>
-						<button onClick={this.handleRemoval.bind(this)}>Delete Note</button>
+						<button className="button button--secondary" onClick={this.handleRemoval.bind(this)}>
+							Delete Note
+						</button>
 					</div>
 				</div>
 			);
 		} else {
 			return (
 				<div className="editor">
-					<p>{this.props.selectedNoteId ? 'Note not found.' : 'Pick or create a note to get started.'}</p>
+					<p className="editor__message">
+						{this.props.selectedNoteId ? 'Note not found.' : 'Pick or create a note to get started.'}
+					</p>
 				</div>
 			);
 		}

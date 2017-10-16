@@ -17,5 +17,16 @@
 }
 
 .editor__body {
+  flex-grow: 1;
+  font-weight: 300;
+  margin-bottom: $large-space;
+  outline: none;
+  padding: $input-spacing;
+  resize: none;
+}
 
+.editor__message {
+  font-style: italic;
+  margin: calc(#{$large-space} * 2);
+  text-align: center;
 }
